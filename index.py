@@ -302,6 +302,7 @@ def test_data(tree, test_dataset):
     for row in test_dataset:
         predicted = print_leaf(classify(row, tree))
         actual = row[-1]
+        print("Actual: %s, Predicted: %s" % (actual, predicted))
 
         if actual == take_max_predicted(predicted):
             successful_predictions += 1
